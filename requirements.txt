@@ -1,3 +1,4 @@
+apify-fingerprint-datapoints
 camoufox
 camoufox[geoip]
 browserforge
