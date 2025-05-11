@@ -6,31 +6,48 @@ from datetime import datetime
 
 print("[~] START Checking for browserforge data files...")
 
-from importlib import resources
+fingerprint_path = '/usr/local/lib/python3.10/dist-packages/browserforge/fingerprints/data/fingerprint-network.zip'
+header_path = '/usr/local/lib/python3.10/dist-packages/browserforge/headers/data/input-network.zip'
 
-print("[~] Checking for browserforge.fingerprints data files...")
-
-# Use importlib.resources to locate the data directories
-with resources.as_file(resources.files('browserforge.fingerprints').joinpath('data')) as fingerprint_dir:
-    fingerprint_path = os.path.join(fingerprint_dir, 'fingerprint-network.zip')
-
-# Verify the files are downloaded
-print(f"Checking for fingerprint-network.zip at: {fingerprint_path}")
 if os.path.exists(fingerprint_path):
     print("fingerprint-network.zip found!")
+    print(fingerprint_path)
 else:
     print("fingerprint-network.zip not found.")
+    print(fingerprint_path)
 
-print("[~] Checking for browserforge.headers data files...")
-
-with resources.as_file(resources.files('browserforge.headers').joinpath('data')) as header_dir:
-    header_path = os.path.join(header_dir, 'input-network.zip')
-
-print(f"Checking for input-network.zip at: {header_path}")
 if os.path.exists(header_path):
     print("input-network.zip found!")
+    print(header_path)
 else:
     print("input-network.zip not found.")
+    print(header_path)
+
+# from importlib import resources
+
+# print("[~] Checking for browserforge.fingerprints data files...")
+
+# # Use importlib.resources to locate the data directories
+# with resources.as_file(resources.files('browserforge.fingerprints').joinpath('data')) as fingerprint_dir:
+#     fingerprint_path = os.path.join(fingerprint_dir, 'fingerprint-network.zip')
+
+# # Verify the files are downloaded
+# print(f"Checking for fingerprint-network.zip at: {fingerprint_path}")
+# if os.path.exists(fingerprint_path):
+#     print("fingerprint-network.zip found!")
+# else:
+#     print("fingerprint-network.zip not found.")
+
+# print("[~] Checking for browserforge.headers data files...")
+
+# with resources.as_file(resources.files('browserforge.headers').joinpath('data')) as header_dir:
+#     header_path = os.path.join(header_dir, 'input-network.zip')
+
+# print(f"Checking for input-network.zip at: {header_path}")
+# if os.path.exists(header_path):
+#     print("input-network.zip found!")
+# else:
+#     print("input-network.zip not found.")
 
 print("[~] END Checking for browserforge data files...")
 
