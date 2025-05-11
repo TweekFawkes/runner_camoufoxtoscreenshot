@@ -1,2 +1,4 @@
 camoufox
 camoufox[geoip]
+browserforge
+browserforge[all]
