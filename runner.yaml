@@ -14,6 +14,7 @@ build:
     python3 -m pip install -U -r requirements.txt
     python3 setup.py
     python3 -m camoufox fetch
+    python3 -m browserforge update
     echo "END: Building the runner"
 
 webform:
