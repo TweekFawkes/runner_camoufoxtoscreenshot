@@ -12,4 +12,5 @@ sudo apt install -y libasound2
 
 python3 -m pip install --upgrade pip
 python3 -m pip install -U -r requirements.txt
+python3 setup.py
 python3 -m camoufox fetch
